@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:reorderables/reorderables.dart';
+import 'package:reorderables2/reorderables2.dart';
 
 class WrapExample extends StatefulWidget {
   @override

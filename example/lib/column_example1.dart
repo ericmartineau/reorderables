@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reorderables/reorderables.dart';
+import 'package:reorderables2/reorderables2.dart';
 
 class ColumnExample1 extends StatefulWidget {
   @override
@@ -55,7 +55,8 @@ class _ColumnExample1State extends State<ColumnExample1> {
       onReorder: _onReorder,
       onNoReorder: (int index) {
         //this callback is optional
-        debugPrint('${DateTime.now().toString().substring(5, 22)} reorder cancelled. index:$index');
+        debugPrint(
+            '${DateTime.now().toString().substring(5, 22)} reorder cancelled. index:$index');
       },
     );
   }

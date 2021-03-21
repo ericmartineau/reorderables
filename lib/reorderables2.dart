@@ -1,4 +1,4 @@
-library reorderables;
+library reorderables2;
 
 export 'src/widgets/reorderable_flex.dart';
 export 'src/widgets/reorderable_sliver.dart';

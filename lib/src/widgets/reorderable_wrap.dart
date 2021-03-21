@@ -6,7 +6,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:reorderables/reorderables.dart';
 
 import './passthrough_overlay.dart';
 //import './transitions.dart';
@@ -15,6 +14,7 @@ import './wrap.dart';
 //import './transitions.dart';
 import '../rendering/wrap.dart';
 import 'reorderable_mixin.dart';
+import 'reorderable_widget.dart';
 
 /// Reorderable (drag and drop) version of [Wrap], A widget that displays its
 /// children in multiple horizontal or vertical runs.
@@ -959,8 +959,8 @@ class _ReorderableWrapContentState extends State<_ReorderableWrapContent>
         if (!willAccept) {
           return false;
         }
-        if(!(_childDisplayIndexToIndex[_currentDisplayIndex] != index &&
-            _currentDisplayIndex != displayIndex)){
+        if (!(_childDisplayIndexToIndex[_currentDisplayIndex] != index &&
+            _currentDisplayIndex != displayIndex)) {
           return false;
         }
 

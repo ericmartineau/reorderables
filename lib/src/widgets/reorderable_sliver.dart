@@ -10,11 +10,11 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:reorderables/reorderables.dart';
 
 import './basic.dart';
 import './typedefs.dart';
 import './reorderable_mixin.dart';
+import 'reorderable_widget.dart';
 
 int _kDefaultSemanticIndexCallback(Widget _, int localIndex) => localIndex;
 
@@ -248,7 +248,7 @@ class ReorderableSliverList extends StatefulWidget {
     this.onDragEnd,
     this.enabled = true,
     Key? key,
-  })  : super(key: key);
+  }) : super(key: key);
 
   /// The delegate that provides the children for this widget.
   ///
@@ -693,8 +693,9 @@ class _ReorderableSliverListState extends State<ReorderableSliverList>
 //        }
         semanticsActions[CustomSemanticsAction(label: reorderItemAfter)] =
             moveAfter;
-        semanticsActions[CustomSemanticsAction(
-            label: localizations.reorderItemToEnd)] = moveToEnd;
+        semanticsActions[
+                CustomSemanticsAction(label: localizations.reorderItemToEnd)] =
+            moveToEnd;
       }
 
       // We pass toWrap with a GlobalKey into the Draggable so that when a list
